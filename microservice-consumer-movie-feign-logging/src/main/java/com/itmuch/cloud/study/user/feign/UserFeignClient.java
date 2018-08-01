@@ -10,6 +10,6 @@ import com.itmuch.cloud.study.user.entity.User;
 
 @FeignClient(name = "microservice-provider-user", configuration = FeignLogConfiguration.class)
 public interface UserFeignClient {
-  @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-  public User findById(@PathVariable("id") Long id);
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public User findById(@PathVariable("id") Long id);
 }

@@ -7,8 +7,8 @@ import feign.Logger;
 
 @Configuration
 public class FeignLogConfiguration {
-  @Bean
-  Logger.Level feignLoggerLevel() {
-    return Logger.Level.BASIC;
-  }
+    @Bean
+    Logger.Level feignLoggerLevel() {
+        return Logger.Level.BASIC;
+    }
 }

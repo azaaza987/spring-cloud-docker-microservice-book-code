@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.itmuch.cloud.study.user.entity.User;
 
 public interface UserFeignClient {
-  @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-  public User findById(@PathVariable("id") Long id);
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public User findById(@PathVariable("id") Long id);
 }

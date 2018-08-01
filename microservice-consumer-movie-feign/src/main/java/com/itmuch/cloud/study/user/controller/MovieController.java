@@ -10,11 +10,11 @@ import com.itmuch.cloud.study.user.feign.UserFeignClient;
 
 @RestController
 public class MovieController {
-  @Autowired
-  private UserFeignClient userFeignClient;
+    @Autowired
+    private UserFeignClient userFeignClient;
 
-  @GetMapping("/user/{id}")
-  public User findById(@PathVariable Long id) {
-    return this.userFeignClient.findById(id);
-  }
+    @GetMapping("/user/{id}")
+    public User findById(@PathVariable Long id) {
+        return this.userFeignClient.findById(id);
+    }
 }

@@ -15,10 +15,11 @@ import com.itmuch.cloud.study.user.entity.User;
  */
 @FeignClient(name = "microservice-provider-user", fallback = FeignClientFallback.class)
 public interface UserFeignClient {
-  @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-  public User findById(@PathVariable("id") Long id);
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public User findById(@PathVariable("id") Long id);
 
 }
+
 
 /**
  * 回退类FeignClientFallback需实现Feign Client接口
@@ -27,11 +28,11 @@ public interface UserFeignClient {
  */
 @Component
 class FeignClientFallback implements UserFeignClient {
-  @Override
-  public User findById(Long id) {
-    User user = new User();
-    user.setId(-1L);
-    user.setUsername("默认用户");
-    return user;
-  }
+    @Override
+    public User findById(Long id) {
+        User user = new User();
+        user.setId(-1L);
+        user.setUsername("默认用户");
+        return user;
+    }
 }
